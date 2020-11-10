@@ -9,6 +9,9 @@ import com.company.createtype.Singleton;
 import com.company.createtype.abstractfactory.AbstractFactory;
 import com.company.createtype.abstractfactory.AppleFactory;
 import com.company.createtype.abstractfactory.XiaomiFactory;
+import com.company.createtype.builder.Builder;
+import com.company.createtype.builder.CarBuilder;
+import com.company.createtype.builder.CarDirector;
 import com.company.createtype.factoryfunction.FactoryA;
 import com.company.createtype.factoryfunction.FactoryFunction;
 import com.company.createtype.simplefactory.Product;
@@ -73,5 +76,9 @@ public class Main {
     //test template method
     Template template = new Programming();
     template.process();
+    //test builder
+    CarDirector carDirector = new CarDirector(new CarBuilder());
+    System.out.println(carDirector.buildCar());
+
   }
 }
