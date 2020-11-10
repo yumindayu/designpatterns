@@ -3,6 +3,8 @@ package com.company;
 import com.company.behaviortype.strategy.EmailNotify;
 import com.company.behaviortype.strategy.SmsNotify;
 import com.company.behaviortype.strategy.User;
+import com.company.behaviortype.template.Programming;
+import com.company.behaviortype.template.Template;
 import com.company.createtype.Singleton;
 import com.company.createtype.abstractfactory.AbstractFactory;
 import com.company.createtype.abstractfactory.AppleFactory;
@@ -68,5 +70,8 @@ public class Main {
     //test responsibility chain
     Process process = new Process();
     process.request(10);
+    //test template method
+    Template template = new Programming();
+    template.process();
   }
 }
